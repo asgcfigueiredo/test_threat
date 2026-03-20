@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "5381cb83-5827-4b1b-b6dd-72715f6acb7d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -148,13 +148,14 @@
                 "text": "Web App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +239,6 @@
               ]
             },
             "id": "bdaf4174-a5fd-4a62-8121-4891c9d0846f",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web App",
@@ -246,12 +246,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "04381e4f-71df-450e-9b72-a31ac02c14f9",
+                  "title": "Expedition",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
+                  "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "37c71a79-70a5-43f9-84b9-02cd5c12a5e1",
+                  "title": "Vulnerability scanning",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "See OWASP Automated Threat #14:\nSystematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
+                  "mitigation": "Defence includes providing anti-automation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "65d8de5f-0fb5-43e3-bc76-1894e747c11f",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "See OWASP Automated Threat #15:\nUsage may resemble legitimate application usage but leads to exhaustion of resources",
+                  "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -350,7 +398,13 @@
             "target": {
               "cell": "006899b2-61a6-4ebd-a627-8eea3b4cddfc",
               "port": "145f7d2e-f731-428a-a957-0ca820b09efa"
-            }
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 177
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -474,13 +528,14 @@
                 "text": "API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -564,7 +619,6 @@
               ]
             },
             "id": "006899b2-61a6-4ebd-a627-8eea3b4cddfc",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "API",
@@ -572,12 +626,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b5275938-ebea-47b2-9c08-b94e0ec89731",
+                  "title": "Expedition",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
+                  "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "a49b0dca-7e24-4098-9170-d7845a7cf752",
+                  "title": "Vulnerability scanning",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "See OWASP Automated Threat #14:\nSystematic enumeration and examination in order to find weaknesses and points where a security vulnerability might exist",
+                  "mitigation": "Defence includes providing anti-automation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "7bb2e74e-fb75-4d30-8291-e8162188b728",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "See OWASP Automated Threat #15:\nUsage may resemble legitimate application usage but leads to exhaustion of resources",
+                  "mitigation": "Mitigation or prevention such as providing backoff, resource management and avoiding forced deadlock",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -594,16 +696,19 @@
                 "text": "MySQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -687,7 +792,6 @@
               ]
             },
             "id": "e148f5b5-0feb-4282-91f4-f7c5efdaa34d",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "MySQL Database",
@@ -695,13 +799,59 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c8ae0a91-f8c5-4908-873f-e4e8ef708b6c",
+                  "title": "Scraping",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "See OWASP Automated Threat #11:\nCollecting accessible data and/or processed output from the application",
+                  "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "c5d4c441-8840-40ea-8177-1faf0d51447a",
+                  "title": "Skewing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "See OWASP Automated Threat #16:\nAutomated repeated clicking or requesting or submitting content, affecting application based metrics such as counts, and measures of frequency and/or rate",
+                  "mitigation": "Defences include control of interaction frequency or proper enforcement of a single unique action",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "91762408-4297-477b-afd8-942abd6b6d90",
+                  "title": "Spamming",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "See OWASP Automated Threat #17:\nStoring malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
+                  "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           }
         ]
@@ -709,6 +859,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 9
   }
 }
